@@ -1,5 +1,5 @@
 <?php
-namespace Mediatis\FormrelaySalesforce\Hooks;
+namespace Mediatis\FormrelaySalesforceCase\Hooks;
 
 /***************************************************************
 *  Copyright notice
@@ -23,7 +23,6 @@ namespace Mediatis\FormrelaySalesforce\Hooks;
 *
 *  This copyright notice MUST APPEAR in all copies of the script!
 ***************************************************************/
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 
 /**
  * Plugin Send form data to SourceFoce.com
@@ -32,7 +31,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
  * @package TYPO3
  * @subpackage  formrelay_salesforce
  */
-class SalesForce extends \Mediatis\Formrelay\AbstractFormrelayHook implements \Mediatis\Formrelay\DataProcessorInterface
+class SalesForceCase extends \Mediatis\Formrelay\AbstractFormrelayHook implements \Mediatis\Formrelay\DataProcessorInterface
 {
     protected function isEnabled()
     {
@@ -46,6 +45,6 @@ class SalesForce extends \Mediatis\Formrelay\AbstractFormrelayHook implements \M
 
     public function getTsKey()
     {
-        return "tx_formrelay_salesforce";
+        return "tx_formrelay_salesforce_case";
     }
 }

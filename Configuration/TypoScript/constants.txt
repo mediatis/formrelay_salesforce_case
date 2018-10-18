@@ -1,20 +1,13 @@
-plugin.tx_formrelay_salesforce{
-	# cat=plugin.tx_formrelay_salesforce//1; type=int+; label= Enable: Only convert to XML if not set to 0.
+plugin.tx_formrelay_salesforce_case{
+	# cat=plugin.tx_formrelay_salesforce_case//1; type=int+; label= Enable: Only convert to XML if not set to 0.
 	enabled = 1
 
-	# cat=plugin.tx_formrelay_salesforce//10; type=int+; label= Cookie Lifetime: Campaign number cookie fifetime in days. Lifetime is limited to session if not set
-	campaignNumber.cookieExpires =
-	
-	# cat=plugin.tx_formrelay_salesforce//20; type=boolean; label= Delete after sending: Delete campaign number cookie after contact form has been sent
-	campaignNumber.deleteCookieAfterSending = 0
-
 	# SFDC Sandbox
-	# salesForceUrl = https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8
-	salesForceUrl = https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8
+	salesForceUrl = https://{XYZ}.my.salesforce.com/servlet/servlet.WebToCase
 
 	fields {
 		defaults {
-			oid =
+			orgid =
 			submit = Submit+Query
 			retURL = #
 			lead_source = Web - TYPO3 formrelay
@@ -22,13 +15,6 @@ plugin.tx_formrelay_salesforce{
 
 			debugEmail =
 			debug = 0
-			# enable SFDC web-2-lead debug mails
-			# debug = 1
-			# debugEmail = your@mail.com
 		}
-	}
-
-	javascript {
-		campaignNumberCookieScript = EXT:formrelay_salesforce/Resources/Public/Javascript/campaigncookie.js
 	}
 }

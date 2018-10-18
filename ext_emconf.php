@@ -11,7 +11,7 @@
 ########################################################################
 
 $EM_CONF[$_EXTKEY] = array(
-    'title' => 'SalesForce Plugin',
+    'title' => 'SalesForce Plugin for services',
     'description' => 'Send form data to SalesForce via web2lead API',
     'category' => 'be',
     'author' => '',
