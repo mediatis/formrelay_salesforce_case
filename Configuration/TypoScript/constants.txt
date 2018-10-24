@@ -3,16 +3,12 @@ plugin.tx_formrelay_salesforce_case{
 	enabled = 1
 
 	# SFDC Sandbox
-	salesForceUrl = https://{XYZ}.my.salesforce.com/servlet/servlet.WebToCase
+	salesForceUrl = https://{XYZ}.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8
 
 	fields {
 		defaults {
 			orgid =
-			submit = Submit+Query
 			retURL = #
-			lead_source = Web - TYPO3 formrelay
-			encoding = UTF-8
-
 			debugEmail =
 			debug = 0
 		}
