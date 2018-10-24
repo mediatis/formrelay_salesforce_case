@@ -12,7 +12,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
     'title' => 'SalesForce Plugin for services',
-    'description' => 'Send form data to SalesForce via web2lead API',
+    'description' => 'Send form data to SalesForce via web2case API',
     'category' => 'be',
     'author' => '',
     'author_email' => '',
@@ -29,11 +29,11 @@ $EM_CONF[$_EXTKEY] = array(
     'clearCacheOnLoad' => 0,
     'lockType' => '',
     'author_company' => '',
-    'version' => '0.1.9',
+    'version' => '0.2.0',
     'constraints' => array(
         'depends' => array(
             'cms' => '',
-            'formrelay' => '0.1.0',
+            'formrelay' => '^0.2.5',
         ),
         'conflicts' => array(
         ),
