@@ -10,14 +10,13 @@
 # "version" and "dependencies" must not be touched!
 ########################################################################
 
-$EM_CONF[$_EXTKEY] = array(
+$EM_CONF[$_EXTKEY] = [
     'title' => 'SalesForce Plugin for services',
     'description' => 'Send form data to SalesForce via web2case API',
     'category' => 'be',
     'author' => '',
     'author_email' => '',
     'shy' => '',
-    'dependencies' => 'cms',
     'conflicts' => '',
     'priority' => '',
     'module' => '',
@@ -29,17 +28,16 @@ $EM_CONF[$_EXTKEY] = array(
     'clearCacheOnLoad' => 0,
     'lockType' => '',
     'author_company' => '',
-    'version' => '0.2.2',
-    'constraints' => array(
-        'depends' => array(
-            'cms' => '',
+    'version' => '1.0.1',
+    'constraints' => [
+        'depends' => [
             'formrelay' => '^0.2.5',
-        ),
-        'conflicts' => array(
-        ),
-        'suggests' => array(
-        ),
-    ),
-    'suggests' => array(
-    ),
-);
+        ],
+        'conflicts' => [
+        ],
+        'suggests' => [
+        ],
+    ],
+    'suggests' => [
+    ],
+];

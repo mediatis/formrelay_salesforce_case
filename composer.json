@@ -1,29 +1,28 @@
 {
-    "authors": [
-        {
-            "email": "info@mediatis.de",
-            "homepage": "http://www.mediatis.de",
-            "name": "TYPO3-TEAM",
-            "role": "Developer"
-        }
+  "authors": [
+    {
+      "email": "info@mediatis.de",
+      "homepage": "http://www.mediatis.de",
+      "name": "TYPO3-TEAM",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "classmap": [
+      "Classes/"
     ],
-    "autoload": {
-        "classmap": [
-            "Classes/"
-        ],
-        "psr-4": {
-            "Mediatis\\FormrelaySalesforceCase\\": "Classes/"
-        }
-    },
-    "license": "GPL-2.0+",
-    "name": "mediatis/formrelay-salesforce-case",
-    "replace": {
-        "mediatis/formrelay_salesforce_case": "self.version",
-        "typo3-ter/formrelay-salesforce_case": "self.version"
-    },
-    "require": {
-         "mediatis/formrelay": ">= 0.1.0"
-    },
-    "type": "typo3-cms-extension",
-    "version": "0.1.9"
+    "psr-4": {
+      "Mediatis\\FormrelaySalesforceCase\\": "Classes/"
+    }
+  },
+  "license": "GPL-2.0+",
+  "name": "mediatis/formrelay-salesforce-case",
+  "replace": {
+    "mediatis/formrelay_salesforce_case": "self.version",
+    "typo3-ter/formrelay-salesforce_case": "self.version"
+  },
+  "require": {
+    "mediatis/formrelay": ">= 0.1.0"
+  },
+  "type": "typo3-cms-extension",
 }
