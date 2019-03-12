@@ -1,6 +1,6 @@
 <?php
 
-namespace Mediatis\FormrelaySalesforceCase\PostProcessors;
+namespace Mediatis\FormrelaySalesforceCase\Finishers;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -21,9 +21,11 @@ use TYPO3\CMS\Extbase\SignalSlot\Dispatcher;
 /**
  * The redirect post-processor
  */
-class RedirectPostProcessor extends \TYPO3\CMS\Form\PostProcess\RedirectPostProcessor
+class RedirectFinisher extends \TYPO3\CMS\Form\Domain\Finishers\RedirectFinisher
 {
     /**
+     * TODO: This method will never be called and hast to overwrite a method in RedirectFinisher
+     *
      * Redirect to a destination
      *
      * Send signal that allows changing the destination URL
