@@ -16,6 +16,9 @@ namespace Mediatis\FormrelaySalesforceCase\Finishers;
  */
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Mvc\Exception\StopActionException;
+use TYPO3\CMS\Extbase\Mvc\Exception\UnsupportedRequestTypeException;
+use TYPO3\CMS\Extbase\Mvc\Web\Request;
 use TYPO3\CMS\Extbase\SignalSlot\Dispatcher;
 
 /**
@@ -34,11 +37,22 @@ class RedirectFinisher extends \TYPO3\CMS\Form\Domain\Finishers\RedirectFinisher
      * @throws \TYPO3\CMS\Extbase\SignalSlot\Exception\InvalidSlotException
      * @throws \TYPO3\CMS\Extbase\SignalSlot\Exception\InvalidSlotReturnException
      */
-    protected function render()
+    protected function redirectToUri(string $uri, int $delay = 0, int $statusCode = 303)
     {
+        if (!$this->request instanceof Request) {
+            throw new UnsupportedRequestTypeException('redirect() only supports web requests.', 1471776458);
+        }
+
+        $uri = $this->addBaseUriIfNecessary($uri);
+        $escapedUri = htmlentities($uri, ENT_QUOTES, 'utf-8');
         $signalSlotDispatcher = GeneralUtility::makeInstance(Dispatcher::class);
-        $destination = $signalSlotDispatcher->dispatch(__CLASS__, 'beforeRender', [$this->destination, $this->form])[0];
-        \TYPO3\CMS\Core\Utility\HttpUtility::redirect($destination);
+        $uri = $signalSlotDispatcher->dispatch(__CLASS__, 'beforeRender', [$uri])[0];
+        $this->response->setContent('<html><head><meta http-equiv="refresh" content="' . (int)$delay . ';url=' . $escapedUri . '"/></head></html>');
+        if ($this->response instanceof \TYPO3\CMS\Extbase\Mvc\Web\Response) {
+            $this->response->setStatus($statusCode);
+            $this->response->setHeader('Location', (string)$uri);
+        }
+        throw new StopActionException('redirectToUri', 1477070964);
         return;
     }
 }
