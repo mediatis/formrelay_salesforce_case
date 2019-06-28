@@ -27,7 +27,6 @@ use TYPO3\CMS\Extbase\SignalSlot\Dispatcher;
 class RedirectFinisher extends \TYPO3\CMS\Form\Domain\Finishers\RedirectFinisher
 {
     /**
-     * TODO: This method will never be called and hast to overwrite a method in RedirectFinisher
      *
      * Redirect to a destination
      *
@@ -46,7 +45,7 @@ class RedirectFinisher extends \TYPO3\CMS\Form\Domain\Finishers\RedirectFinisher
         $uri = $this->addBaseUriIfNecessary($uri);
         $escapedUri = htmlentities($uri, ENT_QUOTES, 'utf-8');
         $signalSlotDispatcher = GeneralUtility::makeInstance(Dispatcher::class);
-        $uri = $signalSlotDispatcher->dispatch(__CLASS__, 'beforeRender', [$uri])[0];
+        $uri = $signalSlotDispatcher->dispatch(__CLASS__, 'beforeRender', [$uri, $this->request->getArguments()])[0];
         $this->response->setContent('<html><head><meta http-equiv="refresh" content="' . (int)$delay . ';url=' . $escapedUri . '"/></head></html>');
         if ($this->response instanceof \TYPO3\CMS\Extbase\Mvc\Web\Response) {
             $this->response->setStatus($statusCode);
