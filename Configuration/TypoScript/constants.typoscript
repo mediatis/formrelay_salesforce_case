@@ -1,13 +1,15 @@
 plugin.tx_formrelay_salesforce_case {
-  # cat=plugin.tx_formrelay_salesforce_case//1; type=int+; label= Enable: Only convert to XML if not set to 0.
-  enabled = 0
+  settings {
+    # cat=plugin.tx_formrelay_salesforce_case//1; type=int+; label= Enable: Only convert to XML if not set to 0.
+    enabled = 0
 
-  salesForceUrl = https://{XYZ}.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8
+    salesForceUrl = https://{XYZ}.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8
 
-  defaults {
-    orgid =
-    retURL = #
-    debugEmail =
-    debug = 0
+    defaults {
+      orgid =
+      retURL = #
+      debugEmail =
+      debug = 0
+    }
   }
 }
