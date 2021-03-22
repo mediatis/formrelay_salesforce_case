@@ -1,25 +1,22 @@
 plugin.tx_formrelay_salesforce_case {
   settings {
     enabled = {$plugin.tx_formrelay_salesforce_case.settings.enabled}
-    salesForceUrl = {$plugin.tx_formrelay_salesforce_case.settings.salesForceUrl}
+    url = {$plugin.tx_formrelay_salesforce_case.settings.url}
 
     gate {
       required = email
     }
 
-    defaults {
-      orgid = {$plugin.tx_formrelay_salesforce_case.settings.defaults.orgid}
-      retURL = {$plugin.tx_formrelay_salesforce_case.settings.defaults.retURL}
-      debug = {$plugin.tx_formrelay_salesforce_case.settings.defaults.debug}
-      debugEmail = {$plugin.tx_formrelay_salesforce_case.settings.defaults.debugEmail}
-    }
-
     fields {
-      mapping {
-        # form-field  -> sdfc-field
+      orgid = {$plugin.tx_formrelay_salesforce_case.settings.fields.orgid}
+      retURL = {$plugin.tx_formrelay_salesforce_case.settings.fields.retURL}
+      debug = {$plugin.tx_formrelay_salesforce_case.settings.fields.debug}
+      debugEmail = {$plugin.tx_formrelay_salesforce_case.settings.fields.debugEmail}
+
+      comments.fieldCollector {
+        ignoreIfEmpty = 1
+        unprocessedOnly = 1
       }
-      unmapped = comments
-      unmapped.appendKeyValue = 1
     }
   }
 }
