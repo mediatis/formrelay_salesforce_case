@@ -23,8 +23,8 @@
   },
   "require": {
     "typo3/cms-core": "^9.5 || ^10.4",
-    "typo3-ter/formrelay": "dev-feature/LMSCB-16_async_submission",
-    "form-relay/salesforce-case": "dev-feature/LMSCB-16_async_submission"
+    "mediatis/formrelay": "^5.0",
+    "form-relay/salesforce-case": "^2.0"
   },
   "type": "typo3-cms-extension"
 }
