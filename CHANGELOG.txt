@@ -1,0 +1,16 @@
+
+3.0.0
+
+[FEATURE] Asynchronous Submissions
+
+2.0.1
+
+[BUGFIX] removed obsolete overwrite of core redirect finisher
+
+2.0.0
+
+[TASK] code updates for mediatis/formrelay 2.0
+
+1.0.0
+
+[TASK] code base
