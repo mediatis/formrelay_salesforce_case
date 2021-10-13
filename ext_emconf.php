@@ -1,15 +1,5 @@
 <?php
 
-########################################################################
-# Extension Manager/Repository config file for ext: "formrelay_salesforce"
-#
-# Auto generated 13-05-2009 13:55
-#
-# Manual updates:
-# Only the data in the array - anything else is removed by next write.
-# "version" and "dependencies" must not be touched!
-########################################################################
-
 $EM_CONF[$_EXTKEY] = [
     'title' => 'SalesForce Plugin for services',
     'description' => 'Send form data to SalesForce via web2case API',
