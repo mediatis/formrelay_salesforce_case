@@ -6,17 +6,7 @@ $EM_CONF[$_EXTKEY] = [
     'category' => 'be',
     'author' => '',
     'author_email' => '',
-    'shy' => '',
-    'conflicts' => '',
-    'priority' => '',
-    'module' => '',
     'state' => 'beta',
-    'internal' => '',
-    'uploadfolder' => 0,
-    'createDirs' => '',
-    'modify_tables' => '',
-    'clearCacheOnLoad' => 0,
-    'lockType' => '',
     'author_company' => '',
     'version' => '3.0.0',
     'constraints' => [
@@ -28,7 +18,5 @@ $EM_CONF[$_EXTKEY] = [
         ],
         'suggests' => [
         ],
-    ],
-    'suggests' => [
     ],
 ];
