@@ -2,7 +2,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'SalesForce Plugin for services',
-    'description' => 'Send form data to SalesForce via web2case API',
+    'description' => 'Delivery system for Salesforce (Web-To-Case-API) based on Mediatis Formrelay',
     'category' => 'be',
     'author' => '',
     'author_email' => '',

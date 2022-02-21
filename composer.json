@@ -1,6 +1,6 @@
 {
   "name": "mediatis/formrelay-salesforce-case",
-  "description": "Add description...",
+  "description": "Delivery system for Salesforce (Web-To-Case-API) based on Mediatis Formrelay",
   "authors": [
     {
       "email": "info@mediatis.de",
